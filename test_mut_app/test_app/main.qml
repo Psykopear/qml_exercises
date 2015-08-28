@@ -14,7 +14,8 @@ ApplicationWindow {
         id: page
 
         ListView {
-            anchors.fill: parent
+            width: parent.width
+            height: parent.height
             model: 5
 
             delegate: SingleLineItem {
