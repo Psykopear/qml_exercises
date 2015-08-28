@@ -1,0 +1,3 @@
+[submodule "test_mut_app/mut"]
+	path = test_mut_app/mut
+	url = https://github.com/evonove/mut
