@@ -1,6 +1,8 @@
 import QtQuick 2.4
+import QtQuick.Controls 1.3
 
 import Mut 0.1
+import Mut.ListItems 0.1
 
 ApplicationWindow {
     id: app
@@ -11,13 +13,29 @@ ApplicationWindow {
     Component {
         id: page
 
-        Page {
-            title: qsTr("Page")
+        ListView {
+            anchors.fill: parent
+            model: 5
 
-            Paper {
-                anchors.fill: parent
+            delegate: SingleLineItem {
+                text: "Single line item"
+                primaryAction: Action {
+                    onTriggered: pageStack.push(secondaryPage)
+                }
             }
         }
     }
+
+    Component {
+        id: secondaryPage
+
+        SingleLineItem {
+            text: "WOO"
+            primaryAction: Action {
+                onTriggered: pageStack.pop()
+            }
+        }
+    }
+
 }
 
