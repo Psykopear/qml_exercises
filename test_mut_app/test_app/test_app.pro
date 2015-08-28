@@ -4,4 +4,4 @@ SOURCES += main.cpp
 
 QT += qml quick widgets svg
 
-RESOURCES += main.qml 
+RESOURCES += qml.qrc 
