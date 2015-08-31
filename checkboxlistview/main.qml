@@ -22,7 +22,6 @@ ApplicationWindow {
         anchors.bottom: button.top
         model: listModel
         delegate: CheckBox {
-            id: foo
             text: model.text
             onCheckedChanged: {
                 if (checked) 
