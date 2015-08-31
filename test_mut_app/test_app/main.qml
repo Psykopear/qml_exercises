@@ -10,12 +10,12 @@ ApplicationWindow {
     visible: true
     title: qsTr("My uselessly shiny app")
 
-    pageStack.initialItem: page    
+    pageStack.initialItem: page
 
     Component.onCompleted: {
         Theme.imageAssetsPath = "qrc:///icons/";
     }
-    
+
     Component {
         id: page
 
@@ -42,7 +42,7 @@ ApplicationWindow {
                             onTriggered: pageStack.push(secondaryPage)
                         }
                     }
-               }
+                }
             }
         }
     }
