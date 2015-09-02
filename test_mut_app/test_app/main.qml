@@ -43,6 +43,7 @@ ApplicationWindow {
 
                     delegate: CheckBox {
                         text: model.text
+                        source: Qt.resolvedUrl("./icons/done.svg")
                         onCheckedChanged: {
                             if(checked) {
                                 checkedList.append(this)
