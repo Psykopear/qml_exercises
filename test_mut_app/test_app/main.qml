@@ -41,9 +41,9 @@ ApplicationWindow {
                     height: parent.height
                     model: listModel 
 
-                    delegate: CheckBox {
+                    delegate: Controls.CheckBox {
+                        style: CheckBoxStyle {}
                         text: model.text
-                        source: Qt.resolvedUrl("./icons/done.svg")
                         onCheckedChanged: {
                             if(checked) {
                                 checkedList.append(this)
